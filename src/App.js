@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useRef, useState } from "react";
 
-function App() {
+export default function App() {
+  const inptRef = useRef(15);
+  const [a, setA] = useState(16);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h4>Krishna koturu {a}</h4>
+      <h4>{inptRef.current.value}</h4>
+      <input type="number" ref={inptRef} />
+      <br />
+      <button onClick={() => setA(a + parseInt(inptRef.current.value))}>
+        Add
+      </button>
     </div>
   );
 }
-
-export default App;
