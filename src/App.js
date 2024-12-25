@@ -1,4 +1,5 @@
 import React, { useRef, useState } from "react";
+import { Krishna } from "./Krishna";
 
 export default function App() {
   const inptRef = useRef(15);
@@ -13,6 +14,7 @@ export default function App() {
       <button onClick={() => setA(a + parseInt(inptRef.current.value))}>
         Add
       </button>
+      <Krishna />
     </div>
   );
 }
