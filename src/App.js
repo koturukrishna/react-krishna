@@ -5,6 +5,8 @@ export default function App() {
   const inptRef = useRef(15);
   const [a, setA] = useState(16);
 
+  console.log("Krishna Koturu")
+
   return (
     <div>
       <h4>Krishna koturu {a}</h4>
